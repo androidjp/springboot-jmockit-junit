@@ -1,0 +1,7 @@
+config:
+  version: v1.0
+server:
+  port: 8383
+spring:
+  profiles:
+    active: dev
