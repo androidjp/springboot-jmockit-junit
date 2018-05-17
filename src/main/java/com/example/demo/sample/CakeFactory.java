@@ -4,6 +4,7 @@ package com.example.demo.sample;
 public class CakeFactory {
   private String cake = null;
   private static String CAKE_NAME = "爱心蛋糕";
+  public final int finalF = 1;
   public String makeACake(int size) {
     cake = CAKE_NAME + " : ";
     cake += addFlour();

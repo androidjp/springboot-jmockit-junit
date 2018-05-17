@@ -42,4 +42,15 @@ public class CakeFactoryTest {
     System.out.println(cakeFactory.getBrand());
   }
 
+  /// mock final field is fail.
+  @Test
+  public void testMockFinalField() throws Exception {
+    new Expectations(cakeFactory) {
+      {
+        Deencapsulation.setField(cakeFactory, "finalF", 18);
+      }
+    };
+    System.out.println(cakeFactory.finalF);
+  }
+
 }
