@@ -12,7 +12,7 @@ import java.util.List;
  * Time: 下午5:02
  * Description:
  */
-@Repository("PcDaoImpl")
+@Repository("pcDaoImpl")
 public class ComputerDAOImpl implements ComputerDAO {
 
     private List<Computer> computers = new ArrayList<>();

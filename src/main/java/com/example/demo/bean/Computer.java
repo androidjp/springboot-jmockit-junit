@@ -1,5 +1,7 @@
 package com.example.demo.bean;
 
+import java.util.Date;
+
 /**
  * User: androidjp
  * Date: 2018/5/12
@@ -11,7 +13,6 @@ public class Computer implements Cloneable {
     private String gpu;
     private int memory;
     private double price;
-
 
     public Computer(String cpu, String gpu, int memory, double price) {
         this.cpu = cpu;

@@ -24,6 +24,8 @@ public class DiyControllerImplTest {
     @Tested
     DiyControllerImpl diyController;
 
+//    sample: mock 掉 Controller中的service.
+  // 注意：一个很巧妙的事情（看code最上面的注释）：这个被Inject的 diyServiceImpl 对象名称，和code中@Resource(name="diyServiceImpl") 中的name值是一一对应的，否则，test报错。
     @Test
     public void testBuyDiyPc(@Injectable DiyService diyServiceImpl) throws Exception {
         new Expectations() {
@@ -35,6 +37,5 @@ public class DiyControllerImplTest {
         JsonRes res = diyController.buyDiyPc("A",5000,"game");
         Assert.assertEquals("success", res.getMessage());
         Assert.assertEquals("i5 7777", ((Computer)(res.getData())).getCpu());
-
     }
 }

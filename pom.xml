@@ -40,7 +40,7 @@
 		<dependency>
 			<groupId>org.jmockit</groupId>
 			<artifactId>jmockit</artifactId>
-			<version>1.39</version>
+			<version>1.19</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -63,7 +63,7 @@
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
-					<argLine>-javaagent:"${settings.localRepository}/org/jmockit/jmockit/1.39/jmockit-1.39.jar=coverage"</argLine>
+					<argLine>-javaagent:"${settings.localRepository}/org/jmockit/jmockit/1.19/jmockit-1.19.jar=coverage"</argLine>
 					<disableXmlReport>false</disableXmlReport>
 					<systemPropertyVariables>
 						<coverage-output>html</coverage-output>

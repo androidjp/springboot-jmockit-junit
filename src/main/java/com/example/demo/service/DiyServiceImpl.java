@@ -17,7 +17,7 @@ import java.util.List;
 @Service
 public class DiyServiceImpl implements DiyService {
 
-    @Resource(name = "PcDaoImpl")
+    @Resource(name = "pcDaoImpl")
     private ComputerDAO computerDAO;
 
     @Override

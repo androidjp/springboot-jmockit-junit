@@ -24,6 +24,7 @@ public class JMockitFlowSample {
     @Test
     public void test1() {
 //        step2: 录制（Record）
+//        还可以再写new一个Expectations，只要出现在重放阶段之前均有效
         new Expectations() {
             {
                 helloJMockit.sayHello();
