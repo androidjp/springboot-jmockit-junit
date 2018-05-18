@@ -35,11 +35,16 @@ public class CakeFactoryTest {
   public void testMockFinalMethod() throws Exception {
     new Expectations(cakeFactory) {
       {
+        //mock public final method
         cakeFactory.getBrand();
         result = "老干妈蛋糕店";
+        //mock private final method
+        Deencapsulation.invoke(cakeFactory, "getPrivateBrand");
+        result = "红桃K";
       }
     };
     System.out.println(cakeFactory.getBrand());
+    System.out.println(cakeFactory.getAllBrand());
   }
 
   /// mock final field is fail.

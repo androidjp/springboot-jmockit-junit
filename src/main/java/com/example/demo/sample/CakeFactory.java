@@ -42,6 +42,14 @@ public class CakeFactory {
     return "爱心蛋糕店（全国连锁）";
   }
 
+  private final String getPrivateBrand() {
+    return "黑心店";
+  }
+
+  public String getAllBrand() {
+    return this.getBrand() + "( "+ getPrivateBrand() +" )";
+  }
+
   private String getOwner() {
     return "店长小李";
   }

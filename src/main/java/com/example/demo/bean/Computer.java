@@ -21,6 +21,10 @@ public class Computer implements Cloneable {
         this.price = price;
     }
 
+    public Computer() {
+
+    }
+
     public double getPrice() {
         return price;
     }
@@ -56,5 +60,15 @@ public class Computer implements Cloneable {
     @Override
     public Computer clone() throws CloneNotSupportedException {
         return (Computer) super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+            "cpu='" + cpu + '\'' +
+            ", gpu='" + gpu + '\'' +
+            ", memory=" + memory +
+            ", price=" + price +
+            '}';
     }
 }
