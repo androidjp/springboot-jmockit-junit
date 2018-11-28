@@ -4,11 +4,13 @@
 * JMockit必须在JDK1.7或以上跑。
 * JMockit必须使用JUnit/TestNG
 * 细节：Maven `pom.xml`中写依赖时，要先写JMockit，后写JUnit，否则，需要每一个测试类都加上注解`@RunWith(JMockit.class)`
+* 细节：配合TestNG使用，不是加`@RunWith()`注解，而是`extends AbstractTestNGSpringContextTests`
 
 ### 注解分析
 * `@Tested`
   * 自动创建被测对象。（调用该类的无参构造器）
   * `@Tested(fullyInitialized = true)`表示对当前被测对象进行递归初始化，他内部的所有依赖都会被正常初始化，不存在mock。
+  * 注意：`@Tested`修饰的对象，已经要是实现类，不要是接口类型，否则报错。
 * `@Injectable`
   * **仅对当前实例**的所有方法进行mock
 * `@Mocked`
